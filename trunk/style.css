@@ -1,0 +1,16 @@
+/* -------------------------------------------------------------- 
+
+	Theme Name: Aurelius
+	Theme URI: http://www.pengbos.com
+	Description: A wordpress Theme by Pengbo's
+	Author: Pengbo
+	Author URI: http://www.pengbos.com
+	Version: 0.1
+	Tags: portfolio, theme, wordpress, jquery, roundabout
+	General comments/License Statement if any.
+
+-------------------------------------------------------------- */
+
+@import "css/reset.css";
+@import "css/layout.css";
+/*@import "style/css/diagnostic.css"; Just use for developing tests */
