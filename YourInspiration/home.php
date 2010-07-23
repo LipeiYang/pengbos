@@ -135,50 +135,50 @@
                     
                     <!-- START BIG IMAGE -->
                     <div id="project01">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/003.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/003.big.jpg"/>
                             
                     </div>
                     
                     <div id="project02">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/001.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/001.big.jpg"/>
                           
                     </div>
                     
                     <div id="project03">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/002.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/002.big.jpg"/>
                     </div>
                     
                     <div id="project04">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/004.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/004.big.jpg"/>
                          
                     </div>
                     
                     <div id="project05">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/005.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/005.big.jpg"/>
                        
                     </div>
                     
                     <div id="project06">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/006.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/006.big.jpg"/>
                          
                     </div>
                     
                     <div id="project07">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/004.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/004.big.jpg"/>
                          
                     </div>
                     
                     <div id="project08">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/003.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/003.big.jpg"/>
                     </div>
                     
                     <div id="project09">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/001.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/001.big.jpg"/>
                         
                     </div>
                     
                     <div id="project10">
-                        <img href="<?php bloginfo('template_url'); ?>/images/portfolio/002.big.jpg"/>
+                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/002.big.jpg"/>
                     </div>
                     <!-- END BIG IMAGE -->
 
