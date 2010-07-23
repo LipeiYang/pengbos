@@ -23,7 +23,7 @@ include(TEMPLATEPATH . '/custom_form_2.php');
 function themeoptions_admin_menu() 
 {
 	// here's where we add our theme options page link to the dashboard sidebar
-	add_theme_page("Theme Options", "Theme Options", 'edit_themes', basename(__FILE__), 'themeoptions_page');
+	add_theme_page("Pengbos Options", "Pengbos Options", 'edit_themes', basename(__FILE__), 'themeoptions_page');
 }
 
 function themeoptions_page() 
@@ -37,7 +37,7 @@ function themeoptions_page()
 	?>
 	<div class="wrap">
 		<div id="icon-themes" class="icon32"><br /></div>
-		<h2>Theme Options</h2>
+		<h2>Pengbo's Inspiration Options</h2>
 	
 		<form method="POST" action="">
 			<input type="hidden" name="update_themeoptions" value="true" />

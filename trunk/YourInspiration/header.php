@@ -87,7 +87,11 @@
                 
                 <!-- START LOGO -->
                 <a href="<?php echo get_settings('home'); ?>" title="home page">
-                    <img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="logo" class="logo" />
+                    <?php if(get_option("my_logo_url")):?>
+                        <img src="<?php echo get_option("my_logo_url")?>" alt="logo" class="logo" />
+                     <?php else:?>
+                         <h2><?php bloginfo('name'); ?></h2>
+                     <?php endif;?>
                 </a>
                 <!-- END LOGO -->
                 
