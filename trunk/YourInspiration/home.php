@@ -20,34 +20,35 @@
 			<!-- START ABOUT PAGE -->
             <a id="about-page"></a>
             
-            <div class="about">
-                    
+            <div class="about">    
+              <?php
+                $the_query = new WP_Query('pagename=about');
+                while ($the_query->have_posts()) : $the_query->the_post();
+                ?>        
                 <div class="grid_5 alpha">
                 
                     <div class="container-about">
                         <h2>About</h2>
-                        
-                      <?php
-                        $the_query = new WP_Query('pagename=about');
-                        while ($the_query->have_posts()) : $the_query->the_post();
-                        ?>
-                            <?php the_content();?>
-                        <?php endwhile; ?>
+                          <?php the_content();?>
                     </div>
                 </div>
                 
                 <!-- START AVATAR -->
                 <div class="grid_4 omega avatar-image">
-                    <img src="<?php bloginfo('template_url'); ?>/images/avatar.jpg" alt="avatar" class="avatar" />
+                    <?php if(get_post_meta($post->ID, 'my_profile_image', true)):?>
+                        <img src="<?php echo get_post_meta($post->ID, 'my_profile_image', true);?>" alt="avatar" class="avatar" />
+                    <?php else: ?>
+                        <img src="<?php bloginfo('template_url'); ?>/images/avatar.jpg" alt="avatar" class="avatar" />
+                     <?php endif; ?>
                 </div>
                 <!-- END AVATAR -->
-                
+                <?php endwhile; ?>
                 <div class="clear"></div>
             </div>
             <div class="about-bottom-bg"></div>
             <!-- END ABOUT PAGE -->
 			
-			 <!-- START PORTFOLIO PAGE -->
+            <!-- START PORTFOLIO PAGE -->
             <a id="portfolio-page"></a>
             
             <div class="portfolio">
@@ -69,118 +70,29 @@
                 
                 <div class="container-portfolio">
                     
-                    <!-- START THUMB IMAGE -->
+                     <?php
+                     $image_counter = 0;
+                     $the_query = new WP_Query('category=portfolio');
+                    while ($the_query->have_posts()) : $the_query->the_post();
+                        $project_name = get_post_meta($post->ID, "my_project_name", true);
+
+                        $website_url = get_post_meta($post->ID, "my_web_url", true);
+                ?>        
+                <?php if(get_post_meta($post->ID, 'my_portfolio_image', true)):?>
                     <div class="photo">
-                        <a href="#project01">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/003.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="WordPress Theme" />
+                        <a href="#project<?php echo $image_counter; ?>" title="<?php the_title(); ?>">								
+                              <img src="<?php bloginfo('template_directory'); ?>/scripts/timthumb.php?src=<?php echo get_post_meta($post->ID, 'my_portfolio_image', true)?>&amp;h=85&amp;w=85&amp;zc=1" alt="<?php the_title(); ?>"/>
                         </a>
                     </div>
-                    
-                    <div class="photo">
-                        <a href="#project02">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/001.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="Asilo nido" />
-                        </a>
+                    <div id="project<?php echo $image_counter; ?>">
+				<img src="<?php echo get_post_meta($post->ID, 'my_portfolio_image', true)?>" alt="<?php the_title(); ?>" />
+                                <a href="<?php echo $website_url; ?>"><p class="foto_caption"><?php echo $project_name; ?></p></a>
                     </div>
-                    
-                    <div class="photo">
-                        <a href="#project03">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/002.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="One Page Folio" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project04">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/004.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="Eclectic: Premium WordPress Theme" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project05">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/005.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="Gold: Premium WordPress Theme" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project06">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/006.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project07">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/004.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project08">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/003.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project09">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/001.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="" />
-                        </a>
-                    </div>
-                    
-                    <div class="photo">
-                        <a href="#project10">
-                            <img src="<?php bloginfo('template_url'); ?>/scripts/timthumb.php?src=images/portfolio/002.big.jpg&amp;h=85&amp;w=85&amp;zc=1" alt="Asilo nido" />
-                        </a>
-                    </div>
-                    
-                    <div class="clear"></div>
-                    <!-- END SMALL IMAGE -->
-                    
-                    <!-- START BIG IMAGE -->
-                    <div id="project01">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/003.big.jpg"/>
-                            
-                    </div>
-                    
-                    <div id="project02">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/001.big.jpg"/>
-                          
-                    </div>
-                    
-                    <div id="project03">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/002.big.jpg"/>
-                    </div>
-                    
-                    <div id="project04">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/004.big.jpg"/>
-                         
-                    </div>
-                    
-                    <div id="project05">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/005.big.jpg"/>
-                       
-                    </div>
-                    
-                    <div id="project06">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/006.big.jpg"/>
-                         
-                    </div>
-                    
-                    <div id="project07">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/004.big.jpg"/>
-                         
-                    </div>
-                    
-                    <div id="project08">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/003.big.jpg"/>
-                    </div>
-                    
-                    <div id="project09">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/001.big.jpg"/>
-                        
-                    </div>
-                    
-                    <div id="project10">
-                        <img src="<?php bloginfo('template_url'); ?>/images/portfolio/002.big.jpg"/>
-                    </div>
-                    <!-- END BIG IMAGE -->
+                    <?php
+                            $image_counter++;
+                    ?>
+                  <?php endif;?> 
+                <?php endwhile; ?>
 
                 </div>
             </div>
@@ -194,6 +106,8 @@
            <?php
                     $the_query = new WP_Query('pagename=contact');
                     while ($the_query->have_posts()) : $the_query->the_post();
+                    
+                    
                     ?>
                 <div class="grid_5 alpha">
                     
@@ -225,20 +139,36 @@
                 
                 <div class="grid_4 omega contact-info">
                     <p class="title">Estimates, questions, information?</p>
-                    
+
                     <p>
                         <?php the_content();?>
                     </p>
+                    <?php $name = get_post_meta($post->ID, "my_", true); ?>
+                     <?php $address = get_post_meta($post->ID, "my_address", true); ?>
+                    <?php $phone_no = get_post_meta($post->ID, "my_phone_no", true); ?>
+                    <?php $fax_no = get_post_meta($post->ID, "my_fax_no", true); ?>
+                    <?php $contact_email = get_post_meta($post->ID, "my_contact_email", true); ?>
+                    <?php $logo = get_post_meta($post->ID, "my_logo", true); ?>
                     
-                    <img src="<?php bloginfo('template_url'); ?>/images/logo.small.gif" alt="logo" class="contact-logo" />
+                    <?php if($logo):?>    
+                         <img src="<?php echo $logo; ?> />
+                   <?php endif;?>
+                  
                     
-                    <h3>YourInspirationFolio</h3>
+                    <h3><?php echo $name; ?></h3>
                     
-                    <address>Arlington Road, 988</address>
+                    <address><?php echo $address; ?></address>
                     
                     <p class="right">
-                        <span>Tel.</span> 074 5678 678<br/>
-                        <span>Fax.</span> 074 5678 678
+                     <?php if($phone_no):?>    
+                            <span>Tel.</span><?php echo $phone_no; ?><br/>
+                       <?php endif;?>
+                      <?php if($fax_no):?>         
+                        <span>Fax.</span> <?php echo $fax_no; ?><br/>
+                       <?php endif;?> 
+                         <?php if($contact_email):?>    
+                       <span>E-Mail.</span> <?php echo $contact_email; ?>
+                        <?php endif;?> 
                     </p>
                 </div>
                <?php endwhile; ?>

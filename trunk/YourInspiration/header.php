@@ -11,8 +11,8 @@
                 <meta name="theme_template_dir" content="<?php bloginfo('template_directory'); ?>" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
                 <!-- [favicon] begin -->
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
 		<!-- [favicon] end -->
 
 		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
@@ -44,7 +44,7 @@
     <script type="text/javascript" charset="utf-8">
                 var theme_template_dir = jQuery("meta[name=theme_template_dir]").attr('content');
 		jQuery(document).ready(function($) {
-			$('div.photo a').fancyZoom({scaleImg: true, closeOnClick: true,directory:theme_template_dir+'/images'});
+			$('div.photo a').fancyZoom({scaleImg: true, directory:theme_template_dir+'/images/fancyzoom'});
 
 		});
     </script>
@@ -101,7 +101,7 @@
                 <!-- END NAV -->
                 
                 <!-- START FOLLOW ME -->
-                <a href="#" title="follow me on twitter">
+                <a href="http://twitter.com/<?php echo get_option("my_twitter_username");?>" title="follow me on twitter">
                     <img src="<?php bloginfo('template_url'); ?>/images/follow-me.gif" alt="follow-me" class="follow-me" />
                 </a>
                 <!-- END FOLLOW ME -->
@@ -113,17 +113,22 @@
                 <!-- END SEND ME AN EMAIL -->
                 
                 <!-- START ADD ME ON SKYPE -->
-                <a href="#" title="Add me on Skype">
+                <a href="skype:<?php echo get_option("my_skype_username");?>?add" title="Add me on Skype">
                     <img src="<?php bloginfo('template_url'); ?>/images/add-on-skype.png" alt="add skype" />
                 </a>
                 <!-- END ADD ME ON SKYPE -->
                 
                 <!-- DO NOT REMOVE: START CREDITS -->
                 <div class="credits">
-                    <!--<a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/2.5/it/80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Your Inspiration Folio</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.yourinspirationweb.com" property="cc:attributionName" rel="cc:attributionURL">Your Inspiration Web</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/">Creative Commons Attribuzione 2.5 Italia License</a>.--> powered by
-                    <!--<a href="http://www.yourinspirationweb.com/en/free-website-template-present-your-portfolio-online-in-a-single-webpage/" title="The Community of Inspiration Dedicated to Webdesign">
+                    <!--<a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/2.5/it/80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Pengbo's</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.pengbos.com" property="cc:attributionName" rel="cc:attributionURL">Pengbo's</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/">Creative Commons Attribuzione 2.5 Italia License</a>.--> powered by
+                    <a href="http://pengbos.com" title="Pengbo's Free Wordpress theme">
+                         Pengbo's
+                    </a>
+                    <br/>
+                    <!--<a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/2.5/it/80x15.png" /></a><br /><span xmlns:dc="http://purl.org/dc/elements/1.1/" property="dc:title">Your Inspiration Folio</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.yourinspirationweb.com" property="cc:attributionName" rel="cc:attributionURL">Your Inspiration Web</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/2.5/it/">Creative Commons Attribuzione 2.5 Italia License</a>.--> &
+                    <a href="http://www.yourinspirationweb.com/en/free-website-template-present-your-portfolio-online-in-a-single-webpage/" title="The Community of Inspiration Dedicated to Webdesign">
                          YIW
-                    </a>-->
+                    </a>
                 </div>
                 <!-- END CREDITS -->
     
