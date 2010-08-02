@@ -2,25 +2,17 @@
 get_header(); 
 ?>
 
-<!-- Caption Line -->
-		<h2 class="grid_12 caption clearfix">Our <span>blog</span>, keeping you up-to-date on our latest news.</h2>
-		
-		<div class="hr grid_12 clearfix">&nbsp;</div>
-		
 		<!-- Column 1 /Content -->
-		<div class="grid_8">
-			
-                    
+		<div class="grid_9  omega right-column">
+
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <!-- Blog Post -->
 			<div class="post">
                             <!-- Post Title -->
-                            <h3 class="title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+                            <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                             <!-- Post Data -->
                             <p class="sub"><?php the_time('F j, Y'); ?> at <?php the_time('g:i a'); ?> | <?php the_category(', '); ?> | <?php comments_number('No comment', '1 comment', '% comments'); ?></p>
                             <div class="hr dotted clearfix">&nbsp;</div>
-                            <!-- Post Image -->
-                            <img src="<?php echo get_post_meta($post->ID, 'my_portfolio_image', true);?>" alt=""/>
                             <?php the_content(); ?>
 
 			</div>
@@ -32,20 +24,6 @@ get_header();
 	<p>Sorry, no posts we're found.</p>
 
 	<?php endif; ?>
-
-			<!-- Blog Navigation -->
-			<p class="clearfix">
-                            
-				<a href="#" class="button float">&lt;&lt; Previous Posts</a>
-				<a href="#" class="button float right">Newer Posts >></a>
-			</p>
-		</div>
-		
-		<!-- Column 2 / Sidebar -->
-		<div class="grid_4">
-                        <?php get_sidebar(); ?>
-		</div>
+    </div>
 
 <?php get_footer(); ?>
-
-                
