@@ -141,14 +141,14 @@
 <?php the_content(); ?>
                                             </p>                                
                 <?php $name = get_post_meta($post->ID, "my_name", true); ?>
-<?php $address = get_post_meta($post->ID, "my_address", true); ?>
+                <?php $address = get_post_meta($post->ID, "my_address", true); ?>
             <?php $phone_no = get_post_meta($post->ID, "my_phone_no", true); ?>
             <?php $fax_no = get_post_meta($post->ID, "my_fax_no", true); ?>
             <?php $contact_email = get_post_meta($post->ID, "my_contact_email", true); ?>
             <?php $logo = get_post_meta($post->ID, "my_logo", true); ?>
-                            
+                      
             <?php if ($logo): ?>    
-                                            <img src="<?php echo $logo; ?> />
+                                            <img src="<?php echo $logo; ?>"  class="contact-logo" />
             <?php endif; ?>
                                 
                                 
