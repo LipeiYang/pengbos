@@ -8,3 +8,5 @@
 <ul class="sidebar">
     <?php wp_get_archives('type=monthly'); ?>
 </ul>
+
+<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar()){} ?>  
