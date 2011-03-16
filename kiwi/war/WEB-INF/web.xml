@@ -13,11 +13,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		</init-param>
 		<init-param>  
 			<param-name>PPAPIPassword</param-name>  
-			<param-value>1297674469</param-value>  
+			<param-value></param-value>  
 		</init-param>
 		<init-param>  
 			<param-name>PPAPISignature</param-name>  
-			<param-value>AFS3AIUlwR3F-KXeWcFWEvt1gfqGAPgoZrdFd3U0XWGtMw509NG.g3ay</param-value>  
+			<param-value></param-value>  
 		</init-param>
 		<init-param>  
 			<param-name>PPAppID</param-name>  
