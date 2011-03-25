@@ -48,5 +48,36 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gdata-youtube-meta-2.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/google-collect-1.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/PayPalXGAEToolkit-0.1-dev.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/activation.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-1.0-sdk-1.4.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-api-labs-1.4.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/appengine-jsr107cache-1.4.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-pool.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-appengine-1.0.8.final.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-core-1.1.5.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/datanucleus-jpa-1.1.5.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/geronimo-jpa_3.0_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-1.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-1.6-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-1.6.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jdo2-api-2.3-eb.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-aop.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-beans.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-context.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-core.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-jdbc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-orm.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-test.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-tx.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-web.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-webmvc.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
