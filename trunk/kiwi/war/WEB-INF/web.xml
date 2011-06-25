@@ -1,57 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
 
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener
-    </listener-class>
-  </listener>
-  
-  
-    <servlet>
-    <servlet-name>paypal</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet
-    </servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	<servlet>
+		<servlet-name>paypal</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
 	<servlet>
 		<servlet-name>PicMart</servlet-name>
 		<servlet-class>com.kiwi.PicMartServlet</servlet-class>
-		<init-param>  
-			<param-name>PPAPIUsername</param-name>  
-			<param-value>stuff_1297674461_biz_api1.gmail.com</param-value>  
+		<init-param>
+			<param-name>PPAPIUsername</param-name>
+			<param-value>stuff_1297674461_biz_api1.gmail.com</param-value>
 		</init-param>
-		<init-param>  
-			<param-name>PPAPIPassword</param-name>  
-			<param-value></param-value>  
+		<init-param>
+			<param-name>PPAPIPassword</param-name>
+			<param-value></param-value>
 		</init-param>
-		<init-param>  
-			<param-name>PPAPISignature</param-name>  
-			<param-value></param-value>  
+		<init-param>
+			<param-name>PPAPISignature</param-name>
+			<param-value></param-value>
 		</init-param>
-		<init-param>  
-			<param-name>PPAppID</param-name>  
-			<param-value>APP-80W284485P519543T</param-value>  
+		<init-param>
+			<param-name>PPAppID</param-name>
+			<param-value>APP-80W284485P519543T</param-value>
 		</init-param>
-		<init-param>  
-			<param-name>PPAccountEmail</param-name>  
-			<param-value>stuff_1297674461_biz@gmail.com</param-value>  
+		<init-param>
+			<param-name>PPAccountEmail</param-name>
+			<param-value>stuff_1297674461_biz@gmail.com</param-value>
 		</init-param>
 	</servlet>
+
+	<servlet>
+		<servlet-name>POS</servlet-name>
+		<servlet-class>com.kiwi.POSServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>PicMart</servlet-name>
 		<url-pattern>/kiwi</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>
-    <servlet-name>paypal</servlet-name>
-    <url-pattern>*.do</url-pattern>
-  </servlet-mapping>
-	
+		<servlet-name>POS</servlet-name>
+		<url-pattern>/pos</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>paypal</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
