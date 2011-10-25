@@ -120,4 +120,5 @@
   <bean id="auditInterceptor"
         class="com.kiwi.AuditInterceptor"></bean>
 
+  <import resource="kiwi-web-cfg.xml"/>
 </beans>
