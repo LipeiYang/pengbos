@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean name="/hello.do" class="com.kiwi.controller.HelloController">
+		<property name="userService" ref="userService" />
+	</bean>
+
+	<bean name="/item/create.form" class="com.kiwi.controller.ItemFormController">
+		<property name="userService" ref="userService" />
+		<property name="itemFormHelper" ref="itemFormHelper"/>
+		<property name="formView" value="/item/form"/>
+		<property name="successView" value="/item/show.do"/>
+		<property name="commandClass" value="java.lang.Object"/>
+	</bean>
+
+	<bean name="/seller/create.form" class="com.kiwi.controller.SellerFormController">
+		<property name="userService" ref="userService" />
+		<property name="sellerHelper" ref="sellerHelper"/>
+		<property name="formView" value="/seller/form"/>
+		<property name="successView" value="/seller/show.do"/>
+		<property name="commandClass" value="com.kiwi.viewobject.SellerVO"/>
+	</bean>
+
+	<bean name="/seller/*.do" class="com.kiwi.controller.SellerController">
+		<property name="userService" ref="userService" />
+		<property name="sellerHelper" ref="sellerHelper"/>
+	</bean>
+
+</beans>

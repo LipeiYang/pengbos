@@ -79,5 +79,8 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-tx.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-web.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-webmvc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/slf4j-api-1.6.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/slf4j-jcl-1.6.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/lombok.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
